@@ -4,7 +4,7 @@
 사용 기술 : C, C++, WPF, DevExpress <br>
 개발 인원 : 1명 <br>
 
----
+#
 
 ### 📖 프로젝트 개요
 
@@ -14,7 +14,7 @@
 - SW 개발 프로세스 일부 적용:  
   `요구사항 분석 → (설계 생략) → 구현 → 테스트`
 
----
+#
 
 ### 🧑‍💻 역할 및 기여
 
@@ -24,23 +24,14 @@
 - SQLite 데이터베이스 연동 및 테스트 수행
 - 엑셀 파일 업로드 및 DB 저장 기능 개발
 
----
+#
 
+<!--
 ### 💻 주요 기능 및 코드 설명
 
 #### 1. UI 구성 (WPF + DevExpress)
 
-```xml
-<!-- MainWindow.xaml -->
-<Window x:Class="RfAnalysis.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-        Title="전파 분석 시스템" Height="600" Width="1000">
-    <Grid>
-        <dx:SimpleButton Content="엑셀 업로드" Click="UploadExcel_Click" />
-    </Grid>
-</Window>
-```
+MainWindow.xaml
 
 DevExpress의 SimpleButton을 사용해 사용자 친화적 UI를 구성했습니다.
 
@@ -72,25 +63,26 @@ Microsoft.Data.Sqlite
 ExcelDataReader (엑셀 파싱용)
 Visual Studio의 NuGet을 통해 외부 라이브러리를 편리하게 관리했습니다.
 
----
+-->
+
 
 ### 🗂️ 프로젝트 구조
-RfAnalysisProject/
+```
+PBLProject
 ├── MainWindow.xaml
-├── UploadExcel_Click.cs
-├── Database/
-│   ├── rf_data.db
-├── Libraries/
-│   ├── MFCInterop.dll
-
----
+├── MfcDll/                  # 주요 DLL 파일들
+├── PBL.sln                  # 솔루션 파일
+├── x64/                     # 빌드된 바이너리 파일
+└── lib/                     # 라이브러리 파일
+```
+#
 
 ### 🧪 테스트 및 결과
 엑셀 업로드 → 파싱 및 SQLite 저장 정상 작동
 UI 구성과 기능 동작이 기존 프로그램과 유사함을 확인
 MFC DLL 연동을 통해 기본 분석 기능 일부 작동 확인
 
----
+#
 
 ### ✍️ 회고
 제한된 시간과 경험 안에서 역설계를 시도하며 기능을 구조적으로 분석하고 구현하는 능력을 키울 수 있었습니다.
